@@ -2,7 +2,7 @@ module Electio
   class Consignment < Base
     END_POINT = "/consignments".freeze
 
-    def all
+    def self.all
       raise NotImplementedError
     end
   end
