@@ -8,5 +8,6 @@ group :test do
 end
 
 group :development, :test do
+  gem 'rubocop', require: false  
   gem "dotenv"
 end

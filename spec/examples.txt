@@ -1,5 +1,5 @@
 example_id                                  | status | run_time        |
 ------------------------------------------- | ------ | --------------- |
-./spec/electio/configuration_spec.rb[1:1:1] | passed | 0.00011 seconds |
-./spec/electio/consignment_spec.rb[1:1:1]   | passed | 0.00539 seconds |
-./spec/electio/consignment_spec.rb[1:2:1]   | passed | 0.0028 seconds  |
+./spec/electio/configuration_spec.rb[1:1:1] | passed | 0.00177 seconds |
+./spec/electio/consignment_spec.rb[1:1:1]   | passed | 0.00411 seconds |
+./spec/electio/consignment_spec.rb[1:2:1]   | passed | 0.00763 seconds |

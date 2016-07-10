@@ -20,8 +20,6 @@ module Electio
     default_headers.merge(options)
   end
 
-  private
-
   def self.base_uri
     URI("https://api.electioapp.com/")
   end

@@ -1,11 +1,11 @@
+require 'codacy-coverage'
+Codacy::Reporter.start
 require 'helpers'
 $LOAD_PATH.push File.expand_path("../lib", __FILE__)
 require "electio"
 require "webmock/rspec"
-require 'codacy-coverage'
 require 'dotenv'
 Dotenv.load
-Codacy::Reporter.start
 WebMock.disable_net_connect!(allow: 'api.codacy.com:443')
 
 RSpec.configure do |config|
