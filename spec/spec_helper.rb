@@ -2,6 +2,8 @@ require 'helpers'
 $LOAD_PATH.push File.expand_path("../lib", __FILE__)
 require "electio"
 require "webmock/rspec"
+require "codeclimate-test-reporter"
+CodeClimate::TestReporter.start
 
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|
