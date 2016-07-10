@@ -5,17 +5,17 @@ module Electio
     end
 
     def self.find(record)
-      Electio::Connection.new(end_point: self::END_POINT.merge("/#{record}")).get
+      Electio::Connection.new(end_point: self::END_POINT, record: record).get
     end
 
-    attr_accessor :parameters
+    attr_accessor :params
 
     def initialize(params = {})
-      self.parames = params
+      self.params = params
     end
 
     def save
-      Electio::Connection.new(end_point: self.class::END_POINT, params: params).post
+      Electio::Connection.new(end_point: self.class::END_POINT, body: params).post
     end
   end
 end

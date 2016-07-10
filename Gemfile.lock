@@ -6,8 +6,12 @@ PATH
 GEM
   remote: https://rubygems.org/
   specs:
+    addressable (2.4.0)
+    crack (0.4.3)
+      safe_yaml (~> 1.0.0)
     diff-lcs (1.2.5)
     env (0.3.0)
+    hashdiff (0.3.0)
     rspec (3.5.0)
       rspec-core (~> 3.5.0)
       rspec-expectations (~> 3.5.0)
@@ -21,6 +25,11 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.5.0)
     rspec-support (3.5.0)
+    safe_yaml (1.0.4)
+    webmock (2.1.0)
+      addressable (>= 2.3.6)
+      crack (>= 0.3.2)
+      hashdiff
 
 PLATFORMS
   ruby
@@ -29,6 +38,7 @@ DEPENDENCIES
   electio!
   env
   rspec (~> 3.5.0)
+  webmock (~> 2.1)
 
 BUNDLED WITH
    1.11.2
