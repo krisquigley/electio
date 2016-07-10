@@ -6,6 +6,7 @@ require 'codacy-coverage'
 require 'dotenv'
 Dotenv.load
 Codacy::Reporter.start
+WebMock.disable_net_connect!(allow: 'codacy.com')
 
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|
@@ -16,10 +17,6 @@ RSpec.configure do |config|
 
   config.mock_with :rspec do |mocks|
     mocks.verify_partial_doubles = true
-  end
-
-  config.after(:suite) do
-    WebMock.disable_net_connect!(allow: 'codacy.com')
   end
 
   config.shared_context_metadata_behavior = :apply_to_host_groups
