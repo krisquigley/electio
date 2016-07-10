@@ -1,0 +1,89 @@
+{
+  "ConsignmentReferenceProvidedByCustomer": "$yourreference",
+  "ConsignmentContactAddresses" : [
+    {
+      "ConsignmentContactAddressType" : "Origin",
+      "ContactAddress" : {
+        "CompanyName" : "$companyName",
+        "Address" : null,
+        "Contact" : {
+          "Title" : "$title",
+          "FirstName" : "$firstname",
+          "LastName" : "$lastname",
+          "Position" : "$position",
+          "Mobile" : "$mobile",
+          "LandLine" : "$landline",
+          "Email" : "$email"
+        },
+        "ShippingLocationReference" : "$locationReference"
+      }
+    },
+    {
+      "ConsignmentContactAddressType" : "Destination",
+      "ContactAddress" : {
+        "CompanyName" : "$companyName",
+        "Address" : {
+          "AddressLine1" : "$addressLine1",
+          "AddressLine2" : "$addressLine2",
+          "AddressLine3" : "$addressLine3",
+          "Town" : "$town",
+          "Region" : "$countyOrRegion",
+          "Postcode" : "$postcode",
+          "SpecialInstructions" : null,
+          "Country" : {
+            "IsoCode" : {
+              "TwoLetterCode" : "GB"
+            }
+          }
+        },
+        "Contact" : {
+          "Title" : "$title",
+          "FirstName" : "$firstname",
+          "LastName" : "$lastname",
+          "Position" : "$position",
+          "Mobile" : "$mobile",
+          "LandLine" : "$landline",
+          "Email" : "$email"
+        },
+        "ShippingLocationReference" : null
+      }
+    }
+  ],
+  "Packages": [
+    {
+      "Weight": {
+        "Kilograms": 5
+      },
+      "Dimensions": {
+        "HeightCm": 5,
+        "LengthCm": 5,
+        "WidthCm": 5
+      },
+      "Value": {
+        "Amount": 5
+      },
+      "Description": "$description",
+      "Items": [
+        {
+          "Reference": "$yourItemReference",
+          "Sku": "$yourSku",
+          "Description":"$yourItemDescription",
+          "CountryOfOriginTwoLetterIsoCode": "$countryCode",
+          "HarmonisationCode":"$harmonisationCode",
+          "Weight": {
+            "Kilograms": 5
+          },
+          "Dimensions": {
+            "HeightCm": 5,
+            "LengthCm": 5,
+            "WidthCm": 5
+          },
+          "Value": {
+            "Amount": 5,
+            "IsoCurrencyCode": "$currencyCode"
+          }
+        }
+      ]
+    }
+  ]
+}

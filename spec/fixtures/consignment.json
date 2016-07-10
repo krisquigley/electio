@@ -1,0 +1,141 @@
+{
+  "CustomerReference": "5eecd353-9aee-4262-bd65-204cc3cc43b3",
+  "ConsignmentReferenceProvidedByCustomer": "testey-test123",
+  "Reference": "EC-000-0MS-MJE",
+  "RequestedDeliveryDate": {
+    "Date": null,
+    "IsToBeExactlyOnTheDateSpecified": false
+  },
+  "CollectionDate": null,
+  "ExpectedDeliveryDate": null,
+  "ScheduledDeliveryDate": null,
+  "ConsignmentContactAddresses" : [
+  {
+    "ConsignmentContactAddressType" : "Origin",
+    "ContactAddress" : {
+      "CompanyName" : "Allied Mills Ltd",
+      "Address" : {
+        "AddressLine1" : "Storm Apartments",
+        "AddressLine2" : "9 Hillside",
+        "AddressLine3" : "",
+        "Town" : "Salford",
+        "Region" : "Greater Manchester",
+        "Postcode" : "M40 1AD",
+        "Country" : {
+          "IsoCode" : {
+            "TwoLetterCode" : "GB"
+          }
+        }
+      },
+      "Contact" : {
+        "Title" : "Mr",
+        "FirstName" : "Steve",
+        "LastName" : "Smith",
+        "Position" : "Head Gardener",
+        "Mobile" : "07702123456",
+        "LandLine" : "0161545121",
+        "Email" : "steve.smith@mpd-group.com"
+      },
+      "ShippingLocationReference" : "ManWarehouse"
+      }
+    },
+    {
+      "ConsignmentContactAddressType" : "Destination",
+      "ContactAddress" : {
+        "CompanyName" : "LF Europe Limited",
+        "Address" : {
+          "AddressLine1" : "Centenary House",
+          "AddressLine2" : "1 Centenary Way",
+          "AddressLine3" : "",
+          "Town" : "Salford",
+          "Region" : "Greater Manchester",
+          "Postcode" : "M50 1RF",
+          "Country" : {
+            "IsoCode" : {
+              "TwoLetterCode" : "GB"
+            }
+          },
+          "SpecialInstructions" : null                       
+          },
+          "Contact" : {
+            "Title" : "Mr",
+            "FirstName" : "Trevor",
+            "LastName" : "McDermott",
+            "Position" : "Chief Operating Officer",
+            "Mobile" : "07495747394",
+            "LandLine" : "0161111454",
+            "Email" : "t.mdermott@lfe.com"
+          },
+          "ShippingLocationReference" : null
+        }
+    }],
+  "Packages" : [
+    {
+      "Reference": "EP-000-0MT-C16",
+      "PackageReferenceProvidedByCustomer": "",
+      "Weight": {
+        "Kg": 3
+      },
+      "Dimensions": {
+        "Height": 10,
+        "Length": 10,
+        "Width": 10
+      },
+      "Value": {
+        "Amount": 2.99,
+        "Currency" : {
+          "Name": "Pound Sterling",
+          "Description": "Pound Sterling",
+          "IsoCode": "GBP"
+        }
+      },
+      "Description": "A parcel",
+      "PackageSizeReference": null,
+      "Barcode": null,
+      "Items": [
+        {
+          "Reference": "e109f163caf0468881b07282f84c020b",
+          "Sku": "MI123",
+          "Description": "Socks",
+          "CountryOfOrigin": null,
+          "HarmonisationCode": "",
+          "Weight": {
+            "Kg": 3
+          },
+          "Dimensions": {
+            "Height": 10,
+            "Length": 10,
+            "Width": 10
+          },
+          "Value": {
+            "Amount": 2.99,
+            "Currency": {
+              "Name" : "Pound Sterling",
+              "Description" : "Pound Sterling",
+              "IsoCode" : "GBP"
+            }
+          },
+          "Barcode": null
+        }
+      ]
+    }
+  ],
+  "Weight": {
+    "Kg": 3
+  },
+  "Value": {
+    "Amount": 2.99,
+    "Currency": {
+      "Name": "Pound Sterling",
+      "Description": "Pound Sterling",
+      "IsoCode": "GBP"
+    }
+  },
+  "Allocation": null,
+  "FailedAllocation": null,
+  "CustomsDocumentation": null,
+  "ConsignmentState": 0,
+  "HaveLabelsEverBeenPrinted": false,
+  "DateLabelsWereFirstPrinted": null,
+  "IsLate": false
+}
