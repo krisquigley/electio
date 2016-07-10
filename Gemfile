@@ -4,7 +4,7 @@ gemspec
 group :test do
   gem "rspec", "~> 3.5.0"
   gem "webmock", "~> 2.1"
-  gem "codeclimate-test-reporter", require: nil
+  gem 'codacy-coverage', require: false
 end
 
 group :development, :test do

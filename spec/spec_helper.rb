@@ -2,10 +2,10 @@ require 'helpers'
 $LOAD_PATH.push File.expand_path("../lib", __FILE__)
 require "electio"
 require "webmock/rspec"
-require "codeclimate-test-reporter"
+require 'codacy-coverage'
 require 'dotenv'
 Dotenv.load
-CodeClimate::TestReporter.start
+Codacy::Reporter.start
 
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|
