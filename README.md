@@ -4,3 +4,9 @@
 # electio
 Ruby gem for the electio API
 
+
+# Installation
+
+`gem install electio`
+
+
