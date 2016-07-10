@@ -8,5 +8,5 @@ group :test do
 end
 
 group :development, :test do
-  gem "env"
+  gem "dotenv"
 end

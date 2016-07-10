@@ -13,7 +13,7 @@ GEM
       safe_yaml (~> 1.0.0)
     diff-lcs (1.2.5)
     docile (1.1.5)
-    env (0.3.0)
+    dotenv (2.1.1)
     hashdiff (0.3.0)
     json (1.8.3)
     rspec (3.5.0)
@@ -45,8 +45,8 @@ PLATFORMS
 
 DEPENDENCIES
   codeclimate-test-reporter
+  dotenv
   electio!
-  env
   rspec (~> 3.5.0)
   webmock (~> 2.1)
 

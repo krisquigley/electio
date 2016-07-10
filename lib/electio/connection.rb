@@ -34,12 +34,20 @@ module Electio
     private
 
     def build_object
+      set_headers
       response = https_conn do |https|
         https.request request
       end
+
       response_object = OpenStruct.new(JSON.load(response.body))
       response_object.status = response.code.to_i
       response_object
+    end
+
+    def set_headers
+      Electio.headers.each do |k, v|
+        request.add_field(k, v)
+      end
     end
 
     def https_conn(&block)

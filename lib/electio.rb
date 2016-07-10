@@ -28,8 +28,8 @@ module Electio
 
   def self.default_headers
     { 
-      "ocp-apim-subscription-key": configuration.api_key,
-      "content-type": "application/json" 
+      "ocp-apim-subscription-key" => configuration.api_key,
+      "content-type" => "application/json" 
     }
   end
 end

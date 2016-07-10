@@ -3,6 +3,8 @@ $LOAD_PATH.push File.expand_path("../lib", __FILE__)
 require "electio"
 require "webmock/rspec"
 require "codeclimate-test-reporter"
+require 'dotenv'
+Dotenv.load
 CodeClimate::TestReporter.start
 
 RSpec.configure do |config|
