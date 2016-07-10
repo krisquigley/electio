@@ -44,6 +44,8 @@ consignment.save #=> Returns response as an object
 - Error handling
 - Implement 100% of API
 
+## Contributing
 
+Bug reports and pull requests are welcome on GitHub at https://github.com/krisquigley/electio.
 
 
