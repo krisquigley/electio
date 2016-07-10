@@ -6,7 +6,7 @@ require 'codacy-coverage'
 require 'dotenv'
 Dotenv.load
 Codacy::Reporter.start
-WebMock.disable_net_connect!(allow: 'codacy.com')
+WebMock.disable_net_connect!(allow: 'api.codacy.com:443')
 
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|
