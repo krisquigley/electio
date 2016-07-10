@@ -8,14 +8,14 @@ RSpec.describe Electio::Consignment, type: :request do
       create_consignment
     end
 
-    let(:consignment) { JSON.load(File.open("spec/fixtures/create_consignment.json", "r")) }
+    let(:consignment) { JSON.load(File.read("spec/fixtures/create_consignment.json")) }
 
     subject do 
       Electio::Consignment.new(consignment).save
     end
 
     it "should return 201 with the relation body" do
-      expect(subject.status).to eq(201)
+      expect(subject.status_code).to eq(201)
       expect(subject).to be_an(Object)
     end
   end
@@ -33,7 +33,7 @@ RSpec.describe Electio::Consignment, type: :request do
     end
 
     it "should return 201 with the relation body" do
-      expect(subject.status).to eq(200)
+      expect(subject.status_code).to eq(200)
       expect(subject).to be_an(Object)
     end
   end

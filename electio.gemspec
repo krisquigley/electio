@@ -17,4 +17,8 @@ Gem::Specification.new do |s|
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {spec}/*`.split("\n")
   s.required_ruby_version = ">= 2.3"
+
+  s.add_runtime_dependency 'plissken', '~> 0.2.0'
+  s.add_runtime_dependency 'awrence', '~> 0.1.0'
+  s.add_runtime_dependency 'hashie', '~> 3.4', '>= 3.4.4'
 end

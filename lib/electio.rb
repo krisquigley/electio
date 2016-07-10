@@ -16,18 +16,7 @@ module Electio
     yield(configuration)
   end
 
-  def self.headers(options = {})
-    default_headers.merge(options)
-  end
-
   def self.base_uri
     URI("https://api.electioapp.com/")
-  end
-
-  def self.default_headers
-    { 
-      "ocp-apim-subscription-key" => configuration.api_key,
-      "content-type" => "application/json" 
-    }
   end
 end

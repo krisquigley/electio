@@ -1,7 +1,6 @@
-require 'simplecov'
-SimpleCov.start
 require 'codacy-coverage'
 Codacy::Reporter.start
+
 require 'helpers'
 $LOAD_PATH.push File.expand_path("../lib", __FILE__)
 require "electio"

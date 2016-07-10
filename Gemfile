@@ -5,7 +5,6 @@ group :test do
   gem "rspec", "~> 3.5.0"
   gem "webmock", "~> 2.1"
   gem 'codacy-coverage', require: false
-  gem 'simplecov', require: false
 end
 
 group :development, :test do
