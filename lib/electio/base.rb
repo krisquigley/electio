@@ -10,6 +10,10 @@ module Electio
       Connection.new(end_point: self::END_POINT, record: record).get
     end
 
+    def self.update(params)
+      new(params).update
+    end
+
     attr_accessor :params
 
     def initialize(params = {})
@@ -18,6 +22,10 @@ module Electio
 
     def save
       Connection.new(end_point: self.class::END_POINT, body: params).post
+    end
+
+    def update
+      Connection.new(end_point: self.class::END_POINT, body: params).put
     end
   end
 end

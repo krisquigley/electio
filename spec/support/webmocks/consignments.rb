@@ -1,7 +1,6 @@
 def create_consignment
  stub_request(:post, "https://api.electioapp.com/consignments/").
-         with(:body => File.read("spec/fixtures/create_consignment.json").gsub(/\s+/, ''),
-              :headers => {'Accept'=>'*/*', 'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3', 'Host'=>'api.electioapp.com', 'User-Agent'=>'Ruby'}).
+         with(:body => File.read("spec/fixtures/create_consignment.json")).
          to_return(:status => 201, :body => "{
                 \"links\": [
                   {

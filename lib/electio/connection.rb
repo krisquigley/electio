@@ -29,7 +29,14 @@ module Electio
     end
 
     def post
-      self.request = Net::HTTP::Post.new(uri)
+      self.request = Net::HTTP::Post.new uri
+      request.body = body.to_json
+
+      build_object
+    end
+
+    def put
+      self.request = Net::HTTP::Put.new uri
       request.body = body.to_json
 
       build_object
@@ -46,7 +53,7 @@ module Electio
 
     def build_object
       response = make_request
-      hash = JSON.load(response.body).to_snake_keys
+      hash = JSON.load(response.body).to_snake_keys if response.body
       response_object = Hashie::Mash.new(hash)
       response_object.status_code = response.code.to_i unless response_object.status_code
       response_object
