@@ -32,7 +32,7 @@ RSpec.describe Electio::Account, type: :request do
       Electio::Account.find(account)
     end
 
-    it "should return 201 with the relation body" do
+    it "should return 200 with the relation body" do
       expect(subject.status_code).to eq(200)
       expect(subject).to be_an(Object)
     end
@@ -50,7 +50,25 @@ RSpec.describe Electio::Account, type: :request do
       Electio::Account.find(account)
     end
 
-    it "should return 201 with the relation body" do
+    it "should return 200 with the relation body" do
+      expect(subject.status_code).to eq(200)
+      expect(subject).to be_an(Object)
+    end
+  end
+
+  describe "Updating an account" do
+    before do
+      authenticate
+      update_account
+    end
+
+    let(:account) { JSON.load(File.read("spec/fixtures/update_account.json")) }
+
+    subject do 
+      Electio::Account.update(account)
+    end
+
+    it "should return 200 with the relation body" do
       expect(subject.status_code).to eq(200)
       expect(subject).to be_an(Object)
     end

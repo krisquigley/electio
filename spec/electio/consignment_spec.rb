@@ -32,7 +32,7 @@ RSpec.describe Electio::Consignment, type: :request do
       Electio::Consignment.find(consignment)
     end
 
-    it "should return 201 with the relation body" do
+    it "should return 200 with the relation body" do
       expect(subject.status_code).to eq(200)
       expect(subject).to be_an(Object)
     end

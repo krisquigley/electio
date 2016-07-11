@@ -3,7 +3,7 @@ module Electio
     END_POINT = "/accounts/".freeze
 
     def self.find(record)
-      record = URI.escape(record, "@")
+      record = record.gsub("@", "%40")
       super
     end
 
