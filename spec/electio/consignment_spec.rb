@@ -20,7 +20,7 @@ RSpec.describe Electio::Consignment, type: :request do
     end
   end
 
-  describe "Querying an assignment" do
+  describe "Querying a consignment" do
     before do
       authenticate
       find_consignment

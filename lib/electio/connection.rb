@@ -29,7 +29,7 @@ module Electio
     end
 
     def post
-      self.request = Net::HTTP::Post.new(uri)
+      self.request = Net::HTTP::Post.new uri
       request.body = body.to_json
 
       build_object
