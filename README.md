@@ -42,10 +42,11 @@ consignment.save #=> Returns response as an object
 ## Todo
 
 - Error handling
-- Implement 100% of API
+- Implement 100% of API - https://github.com/krisquigley/electio/issues/3
 
 ## Contributing
 
+Feel free to implement the missing API end points listed above and submit a PR
 Bug reports and pull requests are welcome on GitHub at https://github.com/krisquigley/electio.
 
 
