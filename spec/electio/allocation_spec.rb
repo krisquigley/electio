@@ -2,7 +2,7 @@ require "spec_helper"
 require "support/webmocks/allocations"
 
 RSpec.describe Electio::Account, type: :request do
-  describe "Creating new allocation" do
+  describe "Creating new allocation with default rules" do
     before do
       authenticate
       create_allocation
