@@ -15,7 +15,7 @@ module Electio
 
     def initialize(options = {})
       self.uri     = Electio.base_uri.merge(options.fetch(:end_point))
-      self.uri     = uri.merge(options[:record]) if options[:record]
+      self.uri     = uri.merge(options[:query]) if options[:query]
       self.params  = options[:params]
       self.body    = options[:body] 
       self.headers = options[:headers] || {}

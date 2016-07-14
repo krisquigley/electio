@@ -7,7 +7,7 @@ module Electio
     end
 
     def self.find(record)
-      Connection.new(end_point: self::END_POINT, record: record).get
+      Connection.new(end_point: self::END_POINT, query: record).get
     end
 
     def self.update(params)
