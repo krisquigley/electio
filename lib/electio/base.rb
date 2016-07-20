@@ -2,8 +2,8 @@ require 'awrence'
 
 module Electio
   class Base
-    def self.all
-      Connection.new(end_point: self::END_POINT).get
+    def self.all(query = false)
+      Connection.new(end_point: self::END_POINT, query: query).get
     end
 
     def self.find(record)
