@@ -1,6 +1,8 @@
 require "electio/base"
 require "electio/account"
 require "electio/allocation"
+require "electio/carrier_service"
+require "electio/carrier"
 require "electio/connection"
 require "electio/configuration"
 require "electio/consignment"

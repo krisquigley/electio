@@ -51,9 +51,13 @@ module Electio
       end
     end
 
+    # TODO: Split this out into service class
+
     def build_object
       response = make_request
-      hash = JSON.load(response.body).to_snake_keys if response.body
+      body = JSON.load(response.body) if response.body 
+      body = { response: body } if body.is_a? Array
+      hash = body.to_snake_keys if body
       response_object = Hashie::Mash.new(hash)
       response_object.status_code = response.code.to_i unless response_object.status_code
       response_object

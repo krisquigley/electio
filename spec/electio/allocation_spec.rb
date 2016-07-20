@@ -11,7 +11,7 @@ RSpec.describe Electio::Account, type: :request do
     let(:allocation) { JSON.load(File.read("spec/fixtures/create_allocation.json")) }
 
     subject do 
-      Electio::Allocation.allocate(allocation)
+      Electio::Allocation.new(allocation).save
     end
 
     it "should return 200 with the relation body" do
