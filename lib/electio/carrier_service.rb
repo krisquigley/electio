@@ -2,11 +2,15 @@ module Electio
   class CarrierService < Base
     END_POINT = "/carriers/".freeze
 
-    def self.find
+    def self.find(*)
       raise NotImplementedError
     end
 
-    def self.update
+    def self.find_by(*)
+      raise NotImplementedError
+    end
+
+    def self.update(*)
       raise NotImplementedError
     end
 

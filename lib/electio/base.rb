@@ -10,6 +10,10 @@ module Electio
       Connection.new(end_point: self::END_POINT, query: record).get
     end
 
+    def self.find_by(query)
+      Connection.new(end_point: "#{self::END_POINT}/#{query.keys.first.to_s.delete('_')}/", query: query.values.first).get
+    end
+
     def self.update(params)
       new(params).update
     end

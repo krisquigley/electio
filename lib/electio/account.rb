@@ -7,6 +7,10 @@ module Electio
       super
     end
 
+    def self.find_by(*)
+      raise NotImplementedError
+    end
+
     def self.all
       raise NotImplementedError
     end
