@@ -1,6 +1,10 @@
 module Electio
   class Carrier < CarrierService
-    def self.find
+    def self.find(record)
+      raise NotImplementedError
+    end
+
+    def self.find_by(query)
       raise NotImplementedError
     end
 
@@ -8,7 +12,7 @@ module Electio
       super
     end
 
-    def self.update
+    def self.update(params)
       raise NotImplementedError
     end
 

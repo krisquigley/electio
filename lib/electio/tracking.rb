@@ -1,12 +1,19 @@
-module Electio
-  class CarrierService < Base
-    END_POINT = "/carriers/".freeze
+require 'plissken'
 
+module Electio
+  class Tracking < Base
+    END_POINT = "/tracking/".freeze
+  
     def self.find(record)
       raise NotImplementedError
     end
 
     def self.find_by(query)
+      query = { "" => query.values.first } if query.keys.first == :consignment_reference
+      super
+    end
+
+    def self.all
       raise NotImplementedError
     end
 
@@ -16,6 +23,6 @@ module Electio
 
     def initialize
       raise NotImplementedError
-    end  
+    end      
   end
 end

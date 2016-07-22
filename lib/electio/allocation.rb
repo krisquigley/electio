@@ -2,7 +2,11 @@ module Electio
   class Allocation < Base
     END_POINT = "/allocation/".freeze
 
-    def self.find
+    def self.find(record)
+      raise NotImplementedError
+    end
+
+    def self.find_by(query)
       raise NotImplementedError
     end
 
@@ -10,7 +14,7 @@ module Electio
       raise NotImplementedError
     end
 
-    def self.update
+    def self.update(params)
       raise NotImplementedError
     end
 

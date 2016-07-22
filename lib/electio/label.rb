@@ -15,11 +15,15 @@ module Electio
       response
     end
 
+    def self.find_by(query)
+      raise NotImplementedError
+    end
+
     def self.all
       raise NotImplementedError
     end
 
-    def self.update
+    def self.update(params)
       raise NotImplementedError
     end
 
