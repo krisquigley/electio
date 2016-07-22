@@ -4,7 +4,7 @@ module Electio
   class Tracking < Base
     END_POINT = "/tracking/".freeze
   
-    def self.find(record)
+    def self.find(*)
       raise NotImplementedError
     end
 
@@ -17,7 +17,7 @@ module Electio
       raise NotImplementedError
     end
 
-    def self.update(params)
+    def self.update(*)
       raise NotImplementedError
     end
 

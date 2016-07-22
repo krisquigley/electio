@@ -7,7 +7,7 @@ module Electio
       super
     end
 
-    def self.find_by(query)
+    def self.find_by(*)
       raise NotImplementedError
     end
 

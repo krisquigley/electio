@@ -11,7 +11,7 @@ module Electio
     end
 
     def self.find_by(query)
-      Connection.new(end_point: "#{self::END_POINT}/#{query.keys.first.to_s.gsub('_','')}/", query: query.values.first).get
+      Connection.new(end_point: "#{self::END_POINT}/#{query.keys.first.to_s.delete('_')}/", query: query.values.first).get
     end
 
     def self.update(params)
